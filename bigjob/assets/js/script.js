@@ -287,7 +287,7 @@ function afficherCalendrier() {
         document.body.appendChild(calendrierDiv);
     }
     calendrierDiv.innerHTML = `
-            <h2 class="text-4xl font-extrabold mb-8 text-cyan-700 tracking-wide calendrier-mois">${moisNoms[mois]} ${annee}</h2>
+            <h2 class="text-4xl font-extrabold mb-8 text-purple-700 tracking-wide calendrier-mois">${moisNoms[mois]} ${annee}</h2>
             <div id="jours" class="grid grid-cols-7 gap-4 w-full calendrier-jours"></div>
         `;
 
@@ -297,7 +297,7 @@ function afficherCalendrier() {
     joursSemaine.forEach(j => {
         const span = document.createElement("span");
         span.textContent = j;
-        span.className = "text-center font-bold text-cyan-600 text-lg";
+        span.className = "text-center font-bold text-purple-700 text-lg";
         joursDiv.appendChild(span);
     });
 
