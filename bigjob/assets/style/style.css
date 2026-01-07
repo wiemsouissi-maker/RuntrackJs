@@ -1,0 +1,97 @@
+/* Navbar */
+.navbar-shadow,
+nav.bg-neutral-primary {
+    box-shadow: 0 4px 18px 0 rgba(23, 69, 110, 0.18), 0 1.5px 8px 0 rgba(23, 69, 110, 0.08);
+    z-index: 30;
+    background-color: #164e63 !important;
+    /* cyan-900 */
+    opacity: 1 !important;
+    margin-bottom: 10px;
+}
+
+/* Formulaires */
+@keyframes neon-pulse {
+
+    0%,
+    100% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #0caec3, 0 0 35px #0caec3, 0 0 40px #0caec3, 0 0 50px #0caec3, 0 0 75px #0caec3;
+    }
+
+    50% {
+        text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 10px #0caec3, 0 0 17px #0caec3, 0 0 20px #0caec3, 0 0 25px #0caec3, 0 0 37px #0caec3;
+    }
+}
+
+@keyframes bg-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.neon-text {
+    animation: neon-pulse 1.5s infinite alternate;
+}
+
+.bg-animate {
+    background: linear-gradient(-45deg, #b7d9e8, #37727f, #1a6986, #33b7d4);
+    background-size: 400% 400%;
+    animation: bg-shift 15s ease infinite;
+}
+
+.float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.rotate {
+    animation: rotate 10s linear infinite;
+}
+
+/* Calendrier */
+.calendrier-custom {
+    box-shadow: 0 8px 32px 0 rgba(99, 102, 241, 0.15), 0 1.5px 8px 0 rgba(236, 72, 153, 0.08);
+    background: linear-gradient(135deg, #e0e7ff 0%, #fff 60%, #fbcfe8 100%);
+}
+
+.calendrier-mois {
+    letter-spacing: 0.08em;
+    text-shadow: 0 1px 2px #17456e, 0 1px 0 #fff;
+}
+
+.calendrier-jours button {
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.calendrier-jours button:hover:not(:disabled) {
+    transform: scale(1.08) translateY(-2px);
+    box-shadow: 0 4px 16px 0 #17456e;
+}
