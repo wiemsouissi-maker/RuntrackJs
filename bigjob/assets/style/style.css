@@ -58,6 +58,24 @@ nav.bg-neutral-primary {
     }
 }
 
+@keyframes color-shift {
+    0% {
+        color: #ffffff;
+    }
+    25% {
+        color: #06b6d4;
+    }
+    50% {
+        color: #3b82f6;
+    }
+    75% {
+        color: #ec4899;
+    }
+    100% {
+        color: #ffffff;
+    }
+}
+
 .neon-text {
     animation: neon-pulse 1.5s infinite alternate;
 }
