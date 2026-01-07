@@ -283,7 +283,7 @@ function afficherCalendrier() {
     if (!calendrierDiv) {
         calendrierDiv = document.createElement("div");
         calendrierDiv.id = "calendrier";
-        calendrierDiv.className = "bg-gradient-to-br from-cyan-200 via-white to-blue-200 rounded-3xl shadow-2xl p-10 w-full max-w-3xl flex flex-col items-center border-4 border-cyan-400 calendrier-custom mx-auto";
+        calendrierDiv.className = "bg-gradient-to-br from-pink-200 via-white to-pink-100 rounded-3xl shadow-2xl p-10 w-full max-w-3xl flex flex-col items-center border-4 border-pink-400 calendrier-custom mx-auto";
         document.body.appendChild(calendrierDiv);
     }
     calendrierDiv.innerHTML = `

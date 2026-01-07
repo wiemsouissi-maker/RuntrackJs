@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/style/style.css">
 </head>
 
-<body class="bg-animate min-h-screen flex items-center justify-center p-4">
+<body class="bg-rose-animate min-h-screen flex items-center justify-center p-4">
 
     <header>
         <nav class="bg-neutral-primary fixed w-full z-20 top-0 start-0 border-b border-default">
@@ -32,16 +32,16 @@
                         id="navbar-links">
                         <li>
                             <a href="index.html"
-                                class="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
+                                class="nav-link-gradient block py-2 px-3"
                                 aria-current="page">Accueil</a>
                         </li>
                         <li id="inscription-li">
                             <a href="inscription.html"
-                                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Inscription</a>
+                                class="nav-link-gradient block py-2 px-3">Inscription</a>
                         </li>
                         <li id="connexion-li">
                             <a href="connexion.html"
-                                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Connexion</a>
+                                class="nav-link-gradient block py-2 px-3">Connexion</a>
                         </li>
                         <li>
                             <a href="calendrier.html"
@@ -49,15 +49,15 @@
                         </li>
                         <li id="backoffice-li" style="display:none">
                             <a href="backoffice.html"
-                                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Backoffice</a>
+                                class="nav-link-gradient block py-2 px-3">Backoffice</a>
                         </li>
                         <li id="admin-li" style="display:none">
                             <a href="admin.html"
-                                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Admin</a>
+                                class="nav-link-gradient block py-2 px-3">Admin</a>
                         </li>
                         <li id="logout-li" style="display:none">
                             <button id="logout-btn"
-                                class="block py-2 px-3 bg-cyan-500 text-white rounded hover:bg-cyan-700 font-bold transition-all duration-200">Déconnexion</button>
+                                class="nav-link-gradient block py-2 px-3 w-full text-left">Déconnexion</button>
                         </li>
                     </ul>
                 </div>
@@ -70,7 +70,7 @@
 
     <div id="calendrier-container" class="w-full flex flex-col items-center justify-center mt-32">
         <div id="calendrier"
-            class="bg-gradient-to-br from-cyan-200 via-white to-cyan-100 rounded-3xl shadow-2xl p-10 w-full max-w-3xl flex flex-col items-center border-4 border-cyan-300 calendrier-custom">
+            class="bg-gradient-to-br from-pink-200 via-white to-pink-100 rounded-3xl shadow-2xl p-10 w-full max-w-3xl flex flex-col items-center border-4 border-pink-400 calendrier-custom">
             <h2 id="titre-calendrier" class="text-4xl font-extrabold mb-8 text-cyan-700 tracking-wide calendrier-mois">
             </h2>
             <div id="jours" class="grid grid-cols-7 gap-4 w-full calendrier-jours"></div>

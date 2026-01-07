@@ -32,32 +32,32 @@
                         id="navbar-links">
                         <li>
                             <a href="index.html"
-                                class="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
+                                class="nav-link-gradient block py-2 px-3"
                                 aria-current="page">Accueil</a>
                         </li>
                         <li id="inscription-li">
                             <a href="inscription.html"
-                                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Inscription</a>
+                                class="nav-link-gradient block py-2 px-3">Inscription</a>
                         </li>
                         <li id="connexion-li">
                             <a href="connexion.html"
-                                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Connexion</a>
+                                class="nav-link-gradient block py-2 px-3">Connexion</a>
                         </li>
                         <li>
                             <a href="calendrier.html"
-                                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Calendrier</a>
+                                class="nav-link-gradient block py-2 px-3">Calendrier</a>
                         </li>
                         <li id="backoffice-li" style="display:none">
                             <a href="backoffice.html"
-                                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Backoffice</a>
+                                class="nav-link-gradient block py-2 px-3">Backoffice</a>
                         </li>
                         <li id="admin-li" style="display:none">
                             <a href="admin.html"
-                                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Admin</a>
+                                class="nav-link-gradient block py-2 px-3">Admin</a>
                         </li>
                         <li id="logout-li" style="display:none">
                             <button id="logout-btn"
-                                class="block py-2 px-3 bg-cyan-500 text-white rounded hover:bg-cyan-700 font-bold transition-all duration-200">Déconnexion</button>
+                                class="nav-link-gradient block py-2 px-3 w-full text-left">Déconnexion</button>
                         </li>
                     </ul>
                 </div>
@@ -68,23 +68,23 @@
 
     <!-- Formulaire connexion -->
 
-    <div class="bg-animate min-h-screen flex items-center justify-center p-4">
+    <div class="min-h-screen flex items-center justify-center p-4" style="background: linear-gradient(135deg, #ec4899 0%, #a855f7 50%, #7c3aed 100%); animation: bg-shift 15s ease infinite; background-size: 400% 400%;">
         <div
-            class="bg-black bg-opacity-80 p-8 rounded-3xl shadow-2xl transform hover:scale-105 transition-all duration-500 max-w-md w-full">
-            <h1 class="text-4xl font-extrabold text-center mb-8 neon-text">Connexion</h1>
+            class="bg-black bg-opacity-60 p-8 rounded-3xl shadow-2xl transform hover:scale-105 transition-all duration-500 max-w-md w-full">
+            <h1 class="text-4xl font-extrabold text-center mb-8" style="animation: color-shift-violet-rose 3s ease-in-out infinite;">Connexion</h1>
             <form class="space-y-6">
                 <div class="relative">
                     <input type="email" name="email" placeholder="Email"
-                        class="w-full bg-gray-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all duration-300">
-                    <i class="fas fa-envelope absolute right-3 top-3 text-cyan-400"></i>
+                        class="w-full bg-gray-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 transition-all duration-300">
+                    <i class="fas fa-envelope absolute right-3 top-3 text-pink-400"></i>
                 </div>
                 <div class="relative">
                     <input type="password" name="password" placeholder="Mot de passe"
-                        class="w-full bg-gray-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all duration-300">
-                    <i class="fas fa-lock absolute right-3 top-3 text-cyan-400"></i>
+                        class="w-full bg-gray-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 transition-all duration-300">
+                    <i class="fas fa-lock absolute right-3 top-3 text-pink-400"></i>
                 </div>
                 <button type="submit"
-                    class="w-full bg-gradient-to-r from-cyan-300 to-cyan-500 text-white font-bold py-3 rounded-lg hover:from-cyan-500 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
+                    class="w-full bg-gradient-to-r from-pink-400 to-purple-600 text-white font-bold py-3 rounded-lg hover:from-pink-600 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500">
                     Se connecter
                 </button>
             </form>

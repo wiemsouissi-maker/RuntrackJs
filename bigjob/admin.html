@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/style/style.css">
 </head>
 
-<body class="bg-animate min-h-screen flex items-center justify-center p-4">
+<body class="min-h-screen flex items-center justify-center p-4" style="background: linear-gradient(135deg, #ec4899 0%, #a855f7 50%, #7c3aed 100%); animation: bg-shift 15s ease infinite; background-size: 400% 400%;">
 
     <header>
         <nav class="bg-neutral-primary fixed w-full z-20 top-0 start-0 border-b border-default">
@@ -33,32 +33,32 @@
                         id="navbar-links">
                         <li>
                             <a href="index.html"
-                                class="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
+                                class="nav-link-gradient block py-2 px-3"
                                 aria-current="page">Accueil</a>
                         </li>
                         <li id="inscription-li">
                             <a href="inscription.html"
-                                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Inscription</a>
+                                class="nav-link-gradient block py-2 px-3">Inscription</a>
                         </li>
                         <li id="connexion-li">
                             <a href="connexion.html"
-                                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Connexion</a>
+                                class="nav-link-gradient block py-2 px-3">Connexion</a>
                         </li>
                         <li>
                             <a href="calendrier.html"
-                                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Calendrier</a>
+                                class="nav-link-gradient block py-2 px-3">Calendrier</a>
                         </li>
                         <li id="backoffice-li" style="display:none">
                             <a href="backoffice.html"
-                                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Backoffice</a>
+                                class="nav-link-gradient block py-2 px-3">Backoffice</a>
                         </li>
                         <li id="admin-li" style="display:none">
                             <a href="admin.html"
-                                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Admin</a>
+                                class="nav-link-gradient block py-2 px-3">Admin</a>
                         </li>
                         <li id="logout-li" style="display:none">
                             <button id="logout-btn"
-                                class="block py-2 px-3 bg-cyan-500 text-white rounded hover:bg-cyan-700 font-bold transition-all duration-200">Déconnexion</button>
+                                class="nav-link-gradient block py-2 px-3 w-full text-left">Déconnexion</button>
                         </li>
                     </ul>
                 </div>
@@ -67,35 +67,35 @@
     </header>
 
     <main style="padding-top: 80px;">
-        <h1 class="text-4xl font-extrabold text-center mb-8 neon-text">Gestion des utilisateurs</h1>
+        <h1 class="text-4xl font-extrabold text-center mb-8" style="animation: color-shift-violet-rose 3s ease-in-out infinite;">Gestion des utilisateurs</h1>
 
         <!-- Formulaire de création d'utilisateur -->
 
-        <form id="create-user-form" class="mb-8 bg-white p-6 rounded shadow-md max-w-md mx-auto">
-            <h2 class="text-xl font-semibold mb-4">Créer un nouvel utilisateur</h2>
+        <form id="create-user-form" class="mb-8 bg-white bg-opacity-90 p-6 rounded shadow-md max-w-md mx-auto border-2 border-pink-400">
+            <h2 class="text-xl font-semibold mb-4 text-pink-600">Créer un nouvel utilisateur</h2>
             <div class="mb-4">
-                <label for="username" class="block text-gray-700">Nom d'utilisateur</label>
+                <label for="username" class="block text-gray-700 font-semibold">Nom d'utilisateur</label>
                 <input type="text" id="username" name="username" required
-                    class="mt-1 block w-full border border-gray-300 rounded p-2">
+                    class="mt-1 block w-full border-2 border-pink-300 rounded p-2 focus:border-pink-500 focus:ring-pink-400">
             </div>
             <div class="mb-4">
-                <label for="email" class="block text-gray-700">Email</label>
+                <label for="email" class="block text-gray-700 font-semibold">Email</label>
                 <input type="email" id="email" name="email" required
-                    class="mt-1 block w-full border border-gray-300 rounded p-2">
+                    class="mt-1 block w-full border-2 border-pink-300 rounded p-2 focus:border-pink-500 focus:ring-pink-400">
             </div>
             <div class="mb-4">
-                <label for="password" class="block text-gray-700">Mot de passe</label>
+                <label for="password" class="block text-gray-700 font-semibold">Mot de passe</label>
                 <input type="password" id="password" name="password" required
-                    class="mt-1 block w-full border border-gray-300 rounded p-2">
+                    class="mt-1 block w-full border-2 border-pink-300 rounded p-2 focus:border-pink-500 focus:ring-pink-400">
             </div>
             <div class="mb-4">
-                <label for="role" class="block text-gray-700">Rôle</label>
-                <select id="role" name="role" required class="mt-1 block w-full border border-gray-300 rounded p-2">
+                <label for="role" class="block text-gray-700 font-semibold">Rôle</label>
+                <select id="role" name="role" required class="mt-1 block w-full border-2 border-pink-300 rounded p-2 focus:border-pink-500 focus:ring-pink-400">
                     <option value="user">Utilisateur</option>
                     <option value="admin">Admin</option>
                 </select>
             </div>
-            <button type="submit" class="bg-cyan-600 text-white px-4 py-2 rounded hover:bg-cyan-700">Créer</button>
+            <button type="submit" class="w-full bg-gradient-to-r from-pink-400 to-purple-600 text-white font-bold px-4 py-2 rounded hover:from-pink-600 hover:to-purple-800 transition-all duration-300">Créer</button>
             <div id="create-user-message" class="mt-2 text-sm"></div>
         </form>
         <div id="users-list" class="space-y-4"></div>
