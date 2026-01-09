@@ -1,0 +1,352 @@
+/* style.css - Gestion du Temps */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: #667eea;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+nav button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    color: #667eea;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav button:hover {
+    background-color: #667eea;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+nav button.active {
+    background-color: #667eea;
+    color: white;
+    box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Main Container */
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Sections */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.tab-content.active-section {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Display */
+.display {
+    font-size: 3.5em;
+    font-weight: bold;
+    text-align: center;
+    color: #667eea;
+    margin: 30px 0;
+    font-family: 'Courier New', monospace;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    letter-spacing: 0.1em;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+    min-width: 100px;
+}
+
+.form-group input {
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100px;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group input:disabled {
+    background-color: #f0f0f0;
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* Buttons */
+button {
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #667eea;
+    color: white;
+    transition: all 0.3s ease;
+    margin: 8px 4px;
+}
+
+button:hover:not(:disabled) {
+    background-color: #764ba2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+}
+
+button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Button Container */
+section > div:last-child,
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Status Messages */
+#reveil-status,
+#minuteur-status {
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    min-height: 30px;
+    background-color: #f5f5f5;
+}
+
+/* Tour List (Chronomètre) */
+#liste-tours {
+    list-style: none;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#liste-tours li {
+    padding: 10px;
+    margin: 8px 0;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    font-weight: 500;
+    color: #667eea;
+    border-left: 4px solid #667eea;
+}
+
+#liste-tours li:hover {
+    background-color: #efefef;
+    transform: translateX(5px);
+    transition: all 0.2s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    main {
+        padding: 20px;
+    }
+
+    .display {
+        font-size: 2.5em;
+        padding: 15px;
+    }
+
+    nav button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+        margin: 5px 2px;
+    }
+}
+
+/* AFFICHAGE CLOCK NUMÉRIQUE */
+#clock {
+  display: inline-flex;
+  padding: 15px 12px;
+  border: 3px solid #667eea;
+  background: linear-gradient(135deg, #1e1e2e 0%, #2d2d44 50%, #1e1e2e 100%);
+  box-shadow: 
+    0 0 15px rgba(102, 126, 234, 0.5),
+    0 0 30px rgba(102, 126, 234, 0.3),
+    inset 0 0 15px rgba(255, 255, 255, 0.1);
+  margin: 20px auto;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 15px;
+  min-width: 280px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+#clock::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(0,0,0,0.1) 100%);
+  pointer-events: none;
+}
+
+[class^="clock_"] {
+  width: 45px;
+  height: 60px;
+  font-size: 48px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 5px;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  font-family: 'Courier New', monospace;
+  box-shadow: 
+    0 6px 15px rgba(255, 107, 107, 0.4),
+    inset 0 -2px 5px rgba(0, 0, 0, 0.2),
+    inset 0 2px 5px rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+[class^="clock_"]:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 8px 20px rgba(255, 107, 107, 0.6),
+    inset 0 -2px 5px rgba(0, 0, 0, 0.2),
+    inset 0 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+/* Décalage des background en Y pour chiffres 0-9 */
+.clock_0 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.clock_1 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+.clock_2 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+.clock_3 { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+.clock_4 { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+.clock_5 { background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); }
+.clock_6 { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+.clock_7 { background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%); }
+.clock_8 { background: linear-gradient(135deg, #2e2e78 0%, #667eea 100%); }
+.clock_9 { background: linear-gradient(135deg, #f5af19 0%, #f12711 100%); }
+
+/* Classe pour le séparateur (deux points) */
+.clock_sep { 
+  width: auto;
+  height: auto;
+  background: transparent;
+  animation: blink 1s infinite;
+  font-size: 38px;
+  font-weight: bold;
+  color: #667eea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+  box-shadow: none;
+  border: none;
+  padding: 0;
+}
+
+@keyframes blink {
+  0%, 49% { 
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(102, 126, 234, 0.8);
+  }
+  50%, 100% { 
+    opacity: 0.3;
+    text-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet O'clock - Horloge, Réveil, Chronomètre, Minuteur</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Gestion du Temps ⏰</h1>
+    
+    <nav>
+        <button id="btn-horloge" class="active">Horloge</button>
+        <button id="btn-reveil">Réveil</button>
+        <button id="btn-chrono">Chronomètre</button>
+        <button id="btn-minuteur">Minuteur</button>
+    </nav>
+
+    <main>
+        <!-- HORLOGE -->
+        <section id="horloge-section" class="tab-content active-section">
+            <h2>Horloge</h2>
+            <div id="affichage-heure" class="display">--:--:--</div>
+            
+            <div id="clock">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+
+        <!-- RÉVEIL -->
+        <section id="reveil-section" class="tab-content">
+            <h2>Réveil</h2>
+            <div class="form-group">
+                <label for="reveil-heure">Heure:</label>
+                <input type="number" id="reveil-heure" min="0" max="23" value="07">
+            </div>
+            <div class="form-group">
+                <label for="reveil-minute">Minute:</label>
+                <input type="number" id="reveil-minute" min="0" max="59" value="00">
+            </div>
+            <button id="btn-set-reveil">Paramétrer le réveil</button>
+            <button id="btn-stop-reveil" disabled>Arrêter le réveil</button>
+            <div id="reveil-status"></div>
+        </section>
+
+        <!-- CHRONOMÈTRE -->
+        <section id="chrono-section" class="tab-content">
+            <h2>Chronomètre</h2>
+            <div id="chrono-display" class="display">00:00:00</div>
+            <button id="start-stop-chrono">Marche</button>
+            <button id="tour-chrono" disabled>Tour</button>
+            <button id="reset-chrono">Reset</button>
+            <ul id="liste-tours"></ul>
+        </section>
+
+        <!-- MINUTEUR -->
+        <section id="minuteur-section" class="tab-content">
+            <h2>Minuteur</h2>
+            <div class="form-group">
+                <label for="minuteur-seconds">Secondes:</label>
+                <input type="number" id="minuteur-seconds" min="0" max="59" value="30">
+            </div>
+            <div class="form-group">
+                <label for="minuteur-minutes">Minutes:</label>
+                <input type="number" id="minuteur-minutes" min="0" max="59" value="00">
+            </div>
+            <div id="minuteur-display" class="display">00:30</div>
+            <button id="start-minuteur">Marche</button>
+            <button id="pause-minuteur" disabled>Pause</button>
+            <button id="reset-minuteur">Reset</button>
+            <div id="minuteur-status"></div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
